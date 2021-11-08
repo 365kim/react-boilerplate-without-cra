@@ -2,6 +2,7 @@ import React, { lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Link, Route, Routes } from 'react-router-dom';
 
 import HomePage from './pages/HomePage';
+import { Button } from './styled-system';
 
 const AboutPage = lazy(() => import(/* webpackChunkName: "AboutPage" */ './pages/AboutPage'));
 
@@ -10,10 +11,12 @@ const App = () => {
     <Router>
       <Suspense fallback={''}>
         <div>
-          <Link to="" style={{ marginRight: 16 }}>
-            Home
-          </Link>
-          <Link to="about">About</Link>
+          <Button>
+            <Link to="">Home</Link>
+          </Button>
+          <Button>
+            <Link to="about">About</Link>
+          </Button>
         </div>
         <Routes>
           <Route path={'/'} element={<HomePage />} />
