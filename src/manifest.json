@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+  "name": "여기서만나",
+  "dir": "ltr",
+  "orientation": "any",
+  "description": "description",
+  "start_url": "/",
+  "display": "minimal-ui",
+  "theme_color": "#000000",
+  "background_color": "#ffffff",
+  "developer": {
+    "name": "Haru Kim",
+    "url": "https://github.com/365kim"
+  }
+}
