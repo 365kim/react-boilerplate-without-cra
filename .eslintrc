@@ -20,9 +20,7 @@
     },
     "requireConfigFile": false,
     "babelOptions": {
-      "presets": [
-        "@babel/preset-react"
-      ]
+      "presets": ["@babel/preset-react"]
     }
   },
   "settings": {
@@ -43,6 +41,7 @@
       {
         "singleQuote": true
       }
-    ]
+    ],
+    "react/prop-types": "off"
   }
 }

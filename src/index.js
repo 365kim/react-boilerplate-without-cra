@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Global } from '@emotion/react';
 
 import App from './App';
-import GlobalStyle from './globalStyle';
+import { GLOBAL_STYLE } from './styled-system';
 
 ReactDOM.render(
   <>
-    <GlobalStyle />
+    <Global styles={GLOBAL_STYLE} />
     <App />
   </>,
   document.getElementById('root')
