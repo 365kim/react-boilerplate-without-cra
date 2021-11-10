@@ -4,7 +4,9 @@ import { jsx, css } from '@emotion/react';
 import COLOR from '../../../styles/color';
 
 const cssButton = css`
+  margin: 4px 0;
   transition: all 600ms ease;
+  box-shadow: rgb(0 0 0 / 14%) 1px 4px 4px, rgb(0 0 0 / 12%) 1px 1px 8px;
 `;
 
 const cssColor = {

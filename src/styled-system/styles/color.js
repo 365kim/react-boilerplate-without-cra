@@ -23,7 +23,7 @@ const COLOR = {
 
   PARAGRAPH: '#111',
   INPUT_TEXT: '#333',
-  PLACEHOLDER: '#999',
+  PLACEHOLDER: '#888',
   BORDER: '#ddd',
   BORDER_DARK: '#bbb',
 };

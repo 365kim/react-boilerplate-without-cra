@@ -15,13 +15,15 @@ const cssContainer = css`
   display: flex;
   align-items: center;
   height: ${INPUT_HEIGHT};
+  margin: 4px 0;
   padding: 0 12px;
 
   font-size: 14px;
   font-weight: 500;
   border-radius: 8px;
-  background-color: rgba(0, 0, 0, 0.01);
+  background-color: rgba(0, 0, 0, 0.02);
   border: 2px solid ${COLOR.BORDER};
+  box-shadow: rgb(0 0 0 / 10%) 1px 4px 4px;
 
   &:focus-within {
     background-color: #fff;
