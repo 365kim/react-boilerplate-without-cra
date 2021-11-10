@@ -4,9 +4,10 @@ import { jsx, css } from '@emotion/react';
 import COLOR from '../../../styles/color';
 
 const cssButton = css`
+  position: relative;
   margin: 4px 0;
-  transition: all 600ms ease;
   box-shadow: rgb(0 0 0 / 14%) 1px 4px 4px, rgb(0 0 0 / 12%) 1px 1px 8px;
+  border: 2px solid transparent;
 `;
 
 const cssColor = {
@@ -20,6 +21,17 @@ const cssColor = {
       background-color: ${COLOR.PRIMARY_LIGHT};
     }
   `,
+  primaryOutline: css`
+    color: ${COLOR.PRIMARY};
+    background-color: ${COLOR.ON_PRIMARY};
+    border-color: ${COLOR.PRIMARY};
+    &:active {
+      background-color: ${COLOR.PRIMARY_LIGHT};
+    }
+    &:hover {
+      background-color: ${COLOR.PRIMARY_BACKGROUND};
+    }
+  `,
   secondary: css`
     color: ${COLOR.ON_SECONDARY};
     background-color: ${COLOR.SECONDARY};
@@ -30,8 +42,16 @@ const cssColor = {
       background-color: ${COLOR.SECONDARY_LIGHT};
     }
   `,
-  tertiary: css`
-    background-color: ${COLOR.TERTIARY};
+  secondaryOutline: css`
+    color: ${COLOR.SECONDARY};
+    background-color: ${COLOR.ON_SECONDARY};
+    border-color: ${COLOR.SECONDARY};
+    &:active {
+      background-color: ${COLOR.SECONDARY_LIGHT};
+    }
+    &:hover {
+      background-color: ${COLOR.SECONDARY_BACKGROUND};
+    }
   `,
   gradient: css`
     color: ${COLOR.ON_GRADIENT};
@@ -93,7 +113,56 @@ const cssState = {
   `,
 };
 
-const ButtonView = ({ color, size, shape, disabled, ...rest }) => {
+const cssEffect = {
+  shine: css`
+    transition: all 600ms ease;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -50%;
+      z-index: 2;
+      width: 50%;
+      height: 100%;
+
+      background: -webkit-linear-gradient(
+        left,
+        rgba(255, 255, 255, 0.8) 0%,
+        rgba(255, 255, 255, 0.3) 100%
+      );
+      background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0.8) 0%,
+        rgba(255, 255, 255, 0.3) 100%
+      );
+    }
+    &:hover::before {
+      -webkit-animation: shine 0.75s;
+      animation: shine 0.75s;
+    }
+
+    @-webkit-keyframes shine {
+      0% {
+        -webkit-transform: translateX(0) skewX(-25deg);
+      }
+      100% {
+        -webkit-transform: translateX(400%) skewX(-25deg);
+      }
+    }
+    @keyframes shine {
+      0% {
+        transform: translateX(0) skewX(-25deg);
+      }
+      100% {
+        transform: translateX(400%) skewX(-25deg);
+      }
+    }
+  `,
+};
+
+const ButtonView = ({ color, size, shape, disabled, shine, ...rest }) => {
   return (
     <button
       css={[
@@ -102,6 +171,7 @@ const ButtonView = ({ color, size, shape, disabled, ...rest }) => {
         cssSize[size ?? 'md'],
         cssShape[shape ?? 'default'],
         disabled && cssState.disabled,
+        shine && cssEffect.shine,
       ]}
       {...rest}
     ></button>

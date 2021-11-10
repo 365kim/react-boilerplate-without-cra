@@ -13,19 +13,20 @@ const App = () => {
     <Router>
       <Suspense fallback={''}>
         <div>
-          <Button color="gradient" shape="pill">
-            <Link to="">Home</Link>
+          <Button color="gradient" shape="pill" shine>
+            <Link to="">Pill</Link>
           </Button>
           <Button>
-            <Link to="about">About</Link>
+            <Link to="about">Default</Link>
           </Button>
           <Button color="secondary" shape="square">
-            <Link to="about">About</Link>
+            <Link to="about">Square</Link>
           </Button>
           <Input label="이름" />
-          <Input label="이름" isSuccess />
-          <Input label="이름" isError />
+          <Input label="문제없서연" isSuccess />
+          <Input label="에러났서연" isError />
         </div>
+
         <Routes>
           <Route path={'/'} element={<HomePage />} />
           <Route path={'/about'} element={<AboutPage />} />

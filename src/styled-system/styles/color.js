@@ -1,31 +1,39 @@
 const COLOR = {
-  GRADIENT: 'linear-gradient(50deg, rgb(39 178 231) 0%, rgb(47 224 148) 100%)',
-  GRADIENT_LIGHT: 'linear-gradient(50deg, #43c8ff 0%, #30fe96 100%)',
-  GRADIENT_DARK: 'linear-gradient(50deg, #2786c3 0%, #2bbd7e 100%)',
-  ON_GRADIENT: '#fff',
+  GRADIENT:
+    'linear-gradient(50deg, rgb(39, 178, 231) 0%, rgb(47, 224, 148) 100%)',
+  GRADIENT_REVERSE:
+    'linear-gradient(50deg, rgb(47, 224, 148) 0%, rgb(39 178 231) 100%)',
+  GRADIENT_LIGHT:
+    'linear-gradient(50deg, rgb(67, 200, 255) 0%, rgb(48, 254, 150) 100%)',
+  GRADIENT_DARK:
+    'linear-gradient(50deg, rgb(39, 134, 195) 0%, rgb(43, 189, 126) 100%)',
+  ON_GRADIENT: 'rgb(255, 255, 255)',
 
-  PRIMARY: '#2fe094',
-  PRIMARY_LIGHT: '#30fe96',
-  PRIMARY_DARK: '#2bbd7e',
-  ON_PRIMARY: '#fff',
+  PRIMARY: 'rgb(47, 224, 148)',
+  PRIMARY_LIGHT: 'rgb(48, 234, 150)',
+  PRIMARY_DARK: 'rgb(43, 189, 126)',
+  PRIMARY_BACKGROUND: 'rgb(239, 255, 248)',
+  ON_PRIMARY: 'rgb(255, 255, 255)',
 
-  SECONDARY: '#27b2e7',
-  SECONDARY_LIGHT: '#43c8ff',
-  SECONDARY_DARK: '#2786c3',
-  ON_SECONDARY: '#fff',
+  SECONDARY: 'rgb(39, 178, 231)',
+  SECONDARY_LIGHT: 'rgb(67, 200, 255)',
+  SECONDARY_DARK: 'rgb(39, 134, 195)',
+  SECONDARY_BACKGROUND: 'rgb(239, 248, 255)',
+  ON_SECONDARY: 'rgb(255, 255, 255)',
 
-  TERTIARY: '#000',
+  TERTIARY: 'rgb(0, 0, 0)',
 
-  ERROR: '#ff99ad',
-  ERROR_LIGHT: '#ffa9ad',
-  ERROR_DARK: '#fe7779',
-  ON_ERROR: '#000',
+  ERROR: 'rgb(255, 153, 173)',
+  ERROR_LIGHT: 'rgb(255, 169, 173)',
+  ERROR_DARK: 'rgb(254, 119, 121)',
+  ERROR_BACKGROUND: 'rgb(255, 239, 248)',
+  ON_ERROR: 'rgb(0, 0, 0)',
 
-  PARAGRAPH: '#111',
-  INPUT_TEXT: '#333',
-  PLACEHOLDER: '#888',
-  BORDER: '#ddd',
-  BORDER_DARK: '#bbb',
+  PARAGRAPH: 'rgb(17, 17, 17)',
+  INPUT_TEXT: 'rgb(51, 51, 51)',
+  PLACEHOLDER: 'rgb(136, 136, 136)',
+  BORDER: 'rgb(221, 221, 221)',
+  BORDER_DARK: 'rgb(153, 153, 153)',
 };
 
 export default COLOR;
