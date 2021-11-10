@@ -1,16 +1,15 @@
-/** @jsx jsx */
-import { jsx, css } from '@emotion/react';
+import { css } from '@emotion/react';
 
 import COLOR from '../../../styles/color';
 
-const cssButton = css`
+export const button = css`
   position: relative;
   margin: 4px 0;
   box-shadow: rgb(0 0 0 / 14%) 1px 4px 4px, rgb(0 0 0 / 12%) 1px 1px 8px;
   border: 2px solid transparent;
 `;
 
-const cssColor = {
+export const color = {
   primary: css`
     color: ${COLOR.ON_PRIMARY};
     background-color: ${COLOR.PRIMARY};
@@ -65,7 +64,7 @@ const cssColor = {
   `,
 };
 
-const cssSize = {
+export const size = {
   xs: css`
     width: 80px;
     padding: 1px 5px;
@@ -92,7 +91,7 @@ const cssSize = {
   `,
 };
 
-const cssShape = {
+export const shape = {
   default: css`
     border-radius: 4px;
   `,
@@ -107,13 +106,13 @@ const cssShape = {
   `,
 };
 
-const cssState = {
+export const state = {
   disabled: css`
     background-color: ${COLOR.PRIMARY_LIGHT};
   `,
 };
 
-const cssEffect = {
+export const effect = {
   shine: css`
     transition: all 600ms ease;
     overflow: hidden;
@@ -161,21 +160,3 @@ const cssEffect = {
     }
   `,
 };
-
-const ButtonView = ({ color, size, shape, disabled, shine, ...rest }) => {
-  return (
-    <button
-      css={[
-        cssButton,
-        cssColor[color ?? 'primary'],
-        cssSize[size ?? 'md'],
-        cssShape[shape ?? 'default'],
-        disabled && cssState.disabled,
-        shine && cssEffect.shine,
-      ]}
-      {...rest}
-    ></button>
-  );
-};
-
-export default ButtonView;

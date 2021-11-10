@@ -1,16 +1,16 @@
 /** @jsx jsx */
-import { jsx, css } from '@emotion/react';
+import { css } from '@emotion/react';
 
 import COLOR from '../../../styles/color';
 
 const INPUT_HEIGHT = '50px';
 const LABEL_HEIGHT = '17px';
 
-const cssShrinkLabel = css`
+export const shrinkLabel = css`
   transform: translateY(-50%) scale(0.7);
 `;
 
-const cssContainer = css`
+export const container = css`
   position: relative;
   display: flex;
   align-items: center;
@@ -30,12 +30,12 @@ const cssContainer = css`
     border: 2px solid ${COLOR.BORDER_DARK};
 
     label {
-      ${cssShrinkLabel}
+      ${shrinkLabel}
     }
   }
 `;
 
-const cssState = {
+export const state = {
   success: css`
     &:focus-within {
       border-color: ${COLOR.PRIMARY};
@@ -56,13 +56,13 @@ const cssState = {
   `,
 };
 
-const cssSubContainer = css`
+export const subContainer = css`
   position: relative;
   flex-grow: 1;
   height: 100%;
 `;
 
-const cssLabel = css`
+export const label = css`
   position: absolute;
   top: calc((${INPUT_HEIGHT} - ${LABEL_HEIGHT}) / 2);
   left: 0;
@@ -74,7 +74,7 @@ const cssLabel = css`
   color: ${COLOR.PLACEHOLDER};
 `;
 
-const cssInput = css`
+export const input = css`
   position: relative;
   width: 100%;
   height: 100%;
@@ -85,47 +85,3 @@ const cssInput = css`
   border: none;
   outline: none;
 `;
-
-const InputView = ({
-  label,
-  id,
-  leftIcon,
-  rightIcon,
-  clearable,
-  value,
-  onChange,
-  onClickClearButton,
-  isSuccess,
-  isError,
-  ...rest
-}) => {
-  return (
-    <div
-      css={[
-        cssContainer,
-        isSuccess && cssState.success,
-        isError && cssState.error,
-      ]}
-    >
-      {leftIcon && <div>{leftIcon}</div>}
-
-      <div css={cssSubContainer}>
-        <label css={[cssLabel, value.length && cssShrinkLabel]} htmlFor={id}>
-          {label}
-        </label>
-        <input
-          css={cssInput}
-          id={id}
-          value={value}
-          onChange={onChange}
-          {...rest}
-        />
-      </div>
-
-      {clearable && <button onClick={onClickClearButton}>x</button>}
-      {rightIcon && <div>{rightIcon}</div>}
-    </div>
-  );
-};
-
-export default InputView;
