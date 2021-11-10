@@ -1,13 +1,14 @@
-import { createGlobalStyle } from 'styled-components';
+import { css } from '@emotion/react';
 
-const GlobalStyle = createGlobalStyle`
+const GLOBAL_STYLE = css`
   * {
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     letter-spacing: -0.03rem;
   }
-  html, body {
+  html,
+  body {
     height: 100%;
     cursor: default;
   }
@@ -40,8 +41,8 @@ const GlobalStyle = createGlobalStyle`
     letter-spacing: -0.1rem;
   }
 
-
-  ul, ol {
+  ul,
+  ol {
     list-style-type: none;
   }
 
@@ -90,4 +91,4 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-export default GlobalStyle;
+export default GLOBAL_STYLE;

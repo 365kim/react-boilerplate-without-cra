@@ -3,9 +3,9 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const BundleAnalyzerPlugin =
+  require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 const getConfig = ({ isDev, isAnalyzeMode }) => ({
   mode: isDev ? 'development' : 'production',
@@ -46,7 +46,10 @@ const getConfig = ({ isDev, isAnalyzeMode }) => ({
         exclude: '/node_modules',
         loader: 'babel-loader',
         options: {
-          presets: [['@babel/preset-env', { targets: { esmodules: true } }], '@babel/preset-react'],
+          presets: [
+            ['@babel/preset-env', { targets: { esmodules: true } }],
+            '@babel/preset-react',
+          ],
         },
       },
     ],
@@ -74,14 +77,6 @@ const getConfig = ({ isDev, isAnalyzeMode }) => ({
             ),
         },
       ],
-    }),
-    new ImageMinimizerPlugin({
-      test: /prefix3.*\.png$/i,
-      deleteOriginalAssets: false,
-      filename: '/images/[name].webp',
-      minimizerOptions: {
-        plugins: ['imagemin-webp'],
-      },
     }),
     new CompressionPlugin({
       algorithm: 'gzip',
