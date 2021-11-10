@@ -13,13 +13,18 @@ const App = () => {
     <Router>
       <Suspense fallback={''}>
         <div>
-          <Button>
+          <Button color="gradient" shape="pill">
             <Link to="">Home</Link>
           </Button>
           <Button>
             <Link to="about">About</Link>
           </Button>
+          <Button color="secondary" shape="square">
+            <Link to="about">About</Link>
+          </Button>
           <Input label="이름" />
+          <Input label="이름" isSuccess />
+          <Input label="이름" isError />
         </div>
         <Routes>
           <Route path={'/'} element={<HomePage />} />

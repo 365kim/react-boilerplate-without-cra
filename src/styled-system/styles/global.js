@@ -6,6 +6,7 @@ const GLOBAL_STYLE = css`
     padding: 0;
     box-sizing: border-box;
     letter-spacing: -0.03rem;
+    outline-color: #000;
   }
   html,
   body {
