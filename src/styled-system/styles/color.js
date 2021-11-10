@@ -12,6 +12,8 @@ const COLOR = {
   TERTIARY: '#000',
 
   PARAGRAPH: '#000',
+  INPUT_TEXT: '#333',
+  PLACEHOLDER: '#999',
   BORDER: '#ddd',
 };
 

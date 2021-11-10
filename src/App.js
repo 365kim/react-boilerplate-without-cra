@@ -2,9 +2,11 @@ import React, { lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Link, Route, Routes } from 'react-router-dom';
 
 import HomePage from './pages/HomePage';
-import { Button } from './styled-system';
+import { Button, Input } from './styled-system';
 
-const AboutPage = lazy(() => import(/* webpackChunkName: "AboutPage" */ './pages/AboutPage'));
+const AboutPage = lazy(() =>
+  import(/* webpackChunkName: "AboutPage" */ './pages/AboutPage')
+);
 
 const App = () => {
   return (
@@ -17,6 +19,7 @@ const App = () => {
           <Button>
             <Link to="about">About</Link>
           </Button>
+          <Input label="이름" />
         </div>
         <Routes>
           <Route path={'/'} element={<HomePage />} />
