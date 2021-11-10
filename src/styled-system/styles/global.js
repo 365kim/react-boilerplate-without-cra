@@ -7,6 +7,9 @@ const GLOBAL_STYLE = css`
     box-sizing: border-box;
     letter-spacing: -0.03rem;
     outline-color: #000;
+    font-family: -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo',
+      Pretendard, Roboto, 'Noto Sans KR', 'Segoe UI', 'Malgun Gothic',
+      sans-serif;
   }
   html,
   body {
