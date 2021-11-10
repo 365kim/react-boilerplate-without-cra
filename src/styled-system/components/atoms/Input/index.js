@@ -1,14 +1,15 @@
 import React, { useRef, useState } from 'react';
+import { getID } from '../../../../utils/generatorOfID';
 
 import InputView from './view';
 
 const Input = (prop) => {
   const [value, setValue] = useState(prop?.defaultValue ?? '');
-  // const IDref = useRef(null);
+  const IDref = useRef(getID());
 
   const newProp = {
     value,
-    // id: IDref.current,
+    id: IDref.current,
     onChange(e) {
       setValue(e.target.value);
     },

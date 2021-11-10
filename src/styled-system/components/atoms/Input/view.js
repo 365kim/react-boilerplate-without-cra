@@ -6,6 +6,10 @@ import COLOR from '../../../styles/color';
 const INPUT_HEIGHT = '50px';
 const LABEL_HEIGHT = '17px';
 
+const cssShrinkLabel = css`
+  transform: translateY(-50%) scale(0.7);
+`;
+
 const cssContainer = css`
   position: relative;
   display: flex;
@@ -16,20 +20,39 @@ const cssContainer = css`
   font-size: 14px;
   font-weight: 500;
   border-radius: 8px;
-  background-color: rgba(0, 0, 0, 0.02);
-  /* text-rendering: optimizeLegibility; */
-  /* -webkit-box-align: center; */
-  /* -webkit-font-smoothing: antialiased; */
-  box-shadow: rgba(197, 204, 211, 0.5) 0px 0px 0px 2px inset;
+  background-color: rgba(0, 0, 0, 0.01);
+  border: 2px solid ${COLOR.BORDER};
 
   &:focus-within {
-    background-color: rgb(255, 255, 255);
+    background-color: #fff;
+    border: 2px solid ${COLOR.BORDER_DARK};
 
     label {
-      transform: translateY(-50%) scale(0.7);
+      ${cssShrinkLabel}
     }
   }
 `;
+
+const cssState = {
+  success: css`
+    &:focus-within {
+      border-color: ${COLOR.PRIMARY};
+
+      label {
+        color: ${COLOR.PRIMARY};
+      }
+    }
+  `,
+  error: css`
+    border-color: ${COLOR.ERROR};
+    label {
+      color: ${COLOR.ERROR};
+    }
+    &:focus-within {
+      border-color: ${COLOR.ERROR_DARK};
+    }
+  `,
+};
 
 const cssSubContainer = css`
   position: relative;
@@ -44,7 +67,7 @@ const cssLabel = css`
   width: 100%;
 
   transform-origin: left top;
-  transition: all 250ms ease 0s;
+  transition: all 250ms ease;
 
   color: ${COLOR.PLACEHOLDER};
 `;
@@ -53,7 +76,7 @@ const cssInput = css`
   position: relative;
   width: 100%;
   height: 100%;
-  margin-top: 6px;
+  margin-top: 8px;
 
   color: ${COLOR.INPUT_TEXT};
   background-color: transparent;
@@ -61,17 +84,43 @@ const cssInput = css`
   outline: none;
 `;
 
-const InputView = ({ label, leftIcon, rightIcon, clearable }) => {
+const InputView = ({
+  label,
+  id,
+  leftIcon,
+  rightIcon,
+  clearable,
+  value,
+  onChange,
+  onClickClearButton,
+  isSuccess,
+  isError,
+  ...rest
+}) => {
   return (
-    <div css={cssContainer}>
+    <div
+      css={[
+        cssContainer,
+        isSuccess && cssState.success,
+        isError && cssState.error,
+      ]}
+    >
       {leftIcon && <div>{leftIcon}</div>}
 
       <div css={cssSubContainer}>
-        <label css={cssLabel}>{label}</label>
-        <input css={cssInput} />
+        <label css={[cssLabel, value.length && cssShrinkLabel]} htmlFor={id}>
+          {label}
+        </label>
+        <input
+          css={cssInput}
+          id={id}
+          value={value}
+          onChange={onChange}
+          {...rest}
+        />
       </div>
 
-      {clearable && <button>x</button>}
+      {clearable && <button onClick={onClickClearButton}>x</button>}
       {rightIcon && <div>{rightIcon}</div>}
     </div>
   );
