@@ -9,7 +9,21 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPl
 const getConfig = ({ isDev, isAnalyzeMode }) => ({
   mode: isDev ? 'development' : 'production',
 
-  resolve: { extensions: ['.ts', '.tsx', '.js', '.jsx'] },
+  resolve: {
+    extensions: ['.ts', '.tsx', '.js', '.jsx'],
+    alias: {
+      pages: path.resolve(__dirname, 'src/pages/'),
+      'styled-system': path.resolve(__dirname, 'src/styledSystem/'),
+      atoms: path.resolve(__dirname, 'src/styledSystem/atoms/'),
+      molecules: path.resolve(__dirname, 'src/styledSystem/molecules/'),
+      templates: path.resolve(__dirname, 'src/styledSystem/templates/'),
+      utils: path.resolve(__dirname, 'src/utils/'),
+      hooks: path.resolve(__dirname, 'src/hooks/'),
+      constants: path.resolve(__dirname, 'src/constants/'),
+      assets: path.resolve(__dirname, 'src/assets/'),
+    },
+  },
+
   entry: {
     main: './src/index.tsx',
   },
@@ -34,6 +48,14 @@ const getConfig = ({ isDev, isAnalyzeMode }) => ({
         exclude: /node_modules/,
       },
       {
+        test: /\.(js|jsx)$/,
+        exclude: '/node_modules',
+        loader: 'babel-loader',
+        options: {
+          presets: [['@babel/preset-env', { targets: { esmodules: true } }], '@babel/preset-react'],
+        },
+      },
+      {
         test: /\.(png|jpe?g|gif|webp)$/i,
         type: 'asset/resource',
         generator: {
@@ -43,14 +65,6 @@ const getConfig = ({ isDev, isAnalyzeMode }) => ({
       {
         test: /\.svg$/i,
         type: 'asset/inline',
-      },
-      {
-        test: /\.(js|jsx)$/,
-        exclude: '/node_modules',
-        loader: 'babel-loader',
-        options: {
-          presets: [['@babel/preset-env', { targets: { esmodules: true } }], '@babel/preset-react'],
-        },
       },
     ],
   },

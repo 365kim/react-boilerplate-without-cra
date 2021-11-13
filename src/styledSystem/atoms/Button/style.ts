@@ -1,6 +1,6 @@
 import { css } from '@emotion/react';
 
-import COLOR from '../../../styles/color';
+import COLOR from '../../@styles/color';
 
 export const button = css`
   position: relative;
@@ -126,16 +126,8 @@ export const effect = {
       width: 50%;
       height: 100%;
 
-      background: -webkit-linear-gradient(
-        left,
-        rgba(255, 255, 255, 0.8) 0%,
-        rgba(255, 255, 255, 0.3) 100%
-      );
-      background: linear-gradient(
-        to right,
-        rgba(255, 255, 255, 0.8) 0%,
-        rgba(255, 255, 255, 0.3) 100%
-      );
+      background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.3) 100%);
+      background: linear-gradient(to right, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.3) 100%);
     }
     &:hover::before {
       -webkit-animation: shine 0.75s;

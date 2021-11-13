@@ -1,5 +1,5 @@
 import { useRef, useState, InputHTMLAttributes, PropsWithChildren, ReactNode, ChangeEvent } from 'react';
-import { getID } from '../../../../utils/generatorOfID';
+import { getID } from '../../../utils/generatorOfID';
 
 import * as css from './style';
 

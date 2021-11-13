@@ -1,6 +1,4 @@
-/** @jsx jsx */
 import { ButtonHTMLAttributes } from 'react';
-import { jsx } from '@emotion/react';
 
 import * as css from './style';
 
