@@ -4,14 +4,14 @@
 
 ### 📚 기술스택 구성
 
-- [ ] TypeScript 4
+- [x] TypeScript 4
 - [x] React 17
 - [x] React Router 6
 - [x] Emotion
 - [x] Webpack 5
+- [x] Babel 7
 - [x] ESLint 7
 - [x] Prettier 2
-- [ ] Storybook
 
 <br>
 
