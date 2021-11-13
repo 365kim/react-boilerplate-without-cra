@@ -1,7 +1,6 @@
 {
-  "printWidth": 80,
+  "printWidth": 120,
   "singleQuote": true,
-  "quoteProps": "consistent",
   "endOfLine": "auto",
   "tabWidth": 2,
   "useTabs": false

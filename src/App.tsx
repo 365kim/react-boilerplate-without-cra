@@ -1,14 +1,13 @@
-import React, { lazy, Suspense } from 'react';
+/** @jsx jsx */
+import { lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Link, Route, Routes } from 'react-router-dom';
 
 import HomePage from './pages/HomePage';
 import { Button, Input } from './styled-system';
 
-const AboutPage = lazy(() =>
-  import(/* webpackChunkName: "AboutPage" */ './pages/AboutPage')
-);
+const AboutPage = lazy(() => import(/* webpackChunkName: "AboutPage" */ './pages/AboutPage'));
 
-const App = () => {
+const App = (): JSX.Element => {
   return (
     <Router>
       <Suspense fallback={''}>

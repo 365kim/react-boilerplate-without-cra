@@ -1,7 +1,7 @@
-export const debounce = (callback, ms) => {
-  let timerId = null;
+export const debounce = (ms: number) => {
+  let timerId: NodeJS.Timer | null = null;
 
-  return () => {
+  return (callback: () => void) => {
     if (timerId) {
       clearTimeout(timerId);
     }

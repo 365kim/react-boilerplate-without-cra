@@ -1,7 +1,7 @@
-export const throttle = (callback, ms) => {
-  let timerId;
+export const throttle = (ms: number) => {
+  let timerId: NodeJS.Timer | null;
 
-  return () => {
+  return (callback: () => void) => {
     if (timerId) {
       return;
     }

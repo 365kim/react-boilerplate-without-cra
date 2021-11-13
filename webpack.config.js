@@ -4,16 +4,14 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
-const BundleAnalyzerPlugin =
-  require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 const getConfig = ({ isDev, isAnalyzeMode }) => ({
   mode: isDev ? 'development' : 'production',
-  resolve: {
-    extensions: ['.js', '.jsx'],
-  },
+
+  resolve: { extensions: ['.ts', '.tsx', '.js', '.jsx'] },
   entry: {
-    main: './src/index',
+    main: './src/index.tsx',
   },
   output: {
     path: path.join(__dirname, 'dist'),
@@ -25,18 +23,23 @@ const getConfig = ({ isDev, isAnalyzeMode }) => ({
   module: {
     rules: [
       {
+        test: /\.(ts|tsx)$/,
+        use: {
+          loader: 'ts-loader',
+          options: {
+            configFile: path.resolve(__dirname, 'tsconfig.json'),
+            transpileOnly: true,
+          },
+        },
+        exclude: /node_modules/,
+      },
+      {
         test: /\.(png|jpe?g|gif|webp)$/i,
-        // exclude: [/[\\/]images[\\/]prefix1.*/, /[\\/]images[\\/]prefix2.*/],
         type: 'asset/resource',
         generator: {
           filename: 'images/[name][ext]',
         },
       },
-      // {
-      //   test: /.png$/i,
-      //   include: [/[\\/]images[\\/]prefix1.*/, /[\\/]images[\\/]prefix2.*/],
-      //   type: 'asset/inline',
-      // },
       {
         test: /\.svg$/i,
         type: 'asset/inline',
@@ -46,10 +49,7 @@ const getConfig = ({ isDev, isAnalyzeMode }) => ({
         exclude: '/node_modules',
         loader: 'babel-loader',
         options: {
-          presets: [
-            ['@babel/preset-env', { targets: { esmodules: true } }],
-            '@babel/preset-react',
-          ],
+          presets: [['@babel/preset-env', { targets: { esmodules: true } }], '@babel/preset-react'],
         },
       },
     ],

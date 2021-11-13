@@ -7,7 +7,7 @@ export const getID = (() => {
 export const getNextKey = (() => {
   let tipIndex = 0;
 
-  return (array) => {
+  return (array: []) => {
     if (tipIndex === array.length) {
       tipIndex = 0;
     }

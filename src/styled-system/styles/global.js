@@ -1,98 +1,10 @@
-import { css } from '@emotion/react';
-
-const GLOBAL_STYLE = css`
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    letter-spacing: -0.03rem;
-    outline-color: #000;
-    font-family: -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo',
-      Pretendard, Roboto, 'Noto Sans KR', 'Segoe UI', 'Malgun Gothic',
-      sans-serif;
-  }
-  html,
-  body {
-    height: 100%;
-    cursor: default;
-  }
-  main {
-    height: 100%;
-  }
-  #root {
-    height: 100%;
-  }
-  a {
-    color: inherit;
-    text-decoration: none;
-    outline: none;
-    cursor: pointer;
-    &:link,
-    &:visited,
-    &:hover,
-    &:active,
-    &:focus {
-      text-decoration: none;
-      color: inherit;
-    }
-  }
-  h2 {
-    padding: 1.75rem 0 1.25rem;
-    font-size: 1.2rem;
-    font-weight: 600;
-    line-height: 1.1rem;
-    text-align: center;
-    letter-spacing: -0.1rem;
-  }
-
-  ul,
-  ol {
-    list-style-type: none;
-  }
-
-  button {
-    cursor: pointer;
-    border: none;
-    background: none;
-    font-family: inherit;
-    &:disabled {
-      cursor: default;
-    }
-  }
-
-  textarea {
-    padding: 1rem;
-    width: 100%;
-    height: 100%;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    resize: none;
-    white-space: normal;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  }
-
-  &::-webkit-scrollbar {
-    width: 0.5rem;
-    background-color: transparent;
-  }
-  &::-webkit-scrollbar-track {
-    background-color: transparent;
-  }
-  &::-webkit-scrollbar-thumb {
-    background-color: #ccc;
-  }
-
-  .sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
-  }
-`;
-
-export default GLOBAL_STYLE;
+"use strict";
+var __makeTemplateObject = (this && this.__makeTemplateObject) || function (cooked, raw) {
+    if (Object.defineProperty) { Object.defineProperty(cooked, "raw", { value: raw }); } else { cooked.raw = raw; }
+    return cooked;
+};
+exports.__esModule = true;
+var react_1 = require("@emotion/react");
+var GLOBAL_STYLE = (0, react_1.css)(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  * {\n    margin: 0;\n    padding: 0;\n    box-sizing: border-box;\n    letter-spacing: -0.03rem;\n    outline-color: #000;\n    font-family: -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo',\n      Pretendard, Roboto, 'Noto Sans KR', 'Segoe UI', 'Malgun Gothic',\n      sans-serif;\n  }\n  html,\n  body {\n    height: 100%;\n    cursor: default;\n  }\n  main {\n    height: 100%;\n  }\n  #root {\n    height: 100%;\n  }\n  a {\n    color: inherit;\n    text-decoration: none;\n    outline: none;\n    cursor: pointer;\n    &:link,\n    &:visited,\n    &:hover,\n    &:active,\n    &:focus {\n      text-decoration: none;\n      color: inherit;\n    }\n  }\n  h2 {\n    padding: 1.75rem 0 1.25rem;\n    font-size: 1.2rem;\n    font-weight: 600;\n    line-height: 1.1rem;\n    text-align: center;\n    letter-spacing: -0.1rem;\n  }\n\n  ul,\n  ol {\n    list-style-type: none;\n  }\n\n  button {\n    cursor: pointer;\n    border: none;\n    background: none;\n    font-family: inherit;\n    &:disabled {\n      cursor: default;\n    }\n  }\n\n  textarea {\n    padding: 1rem;\n    width: 100%;\n    height: 100%;\n    border-radius: 6px;\n    border: 1px solid #ccc;\n    resize: none;\n    white-space: normal;\n    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);\n  }\n\n  &::-webkit-scrollbar {\n    width: 0.5rem;\n    background-color: transparent;\n  }\n  &::-webkit-scrollbar-track {\n    background-color: transparent;\n  }\n  &::-webkit-scrollbar-thumb {\n    background-color: #ccc;\n  }\n\n  .sr-only {\n    position: absolute;\n    width: 1px;\n    height: 1px;\n    padding: 0;\n    margin: -1px;\n    overflow: hidden;\n    clip: rect(0, 0, 0, 0);\n    white-space: nowrap;\n    border: 0;\n  }\n"], ["\n  * {\n    margin: 0;\n    padding: 0;\n    box-sizing: border-box;\n    letter-spacing: -0.03rem;\n    outline-color: #000;\n    font-family: -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo',\n      Pretendard, Roboto, 'Noto Sans KR', 'Segoe UI', 'Malgun Gothic',\n      sans-serif;\n  }\n  html,\n  body {\n    height: 100%;\n    cursor: default;\n  }\n  main {\n    height: 100%;\n  }\n  #root {\n    height: 100%;\n  }\n  a {\n    color: inherit;\n    text-decoration: none;\n    outline: none;\n    cursor: pointer;\n    &:link,\n    &:visited,\n    &:hover,\n    &:active,\n    &:focus {\n      text-decoration: none;\n      color: inherit;\n    }\n  }\n  h2 {\n    padding: 1.75rem 0 1.25rem;\n    font-size: 1.2rem;\n    font-weight: 600;\n    line-height: 1.1rem;\n    text-align: center;\n    letter-spacing: -0.1rem;\n  }\n\n  ul,\n  ol {\n    list-style-type: none;\n  }\n\n  button {\n    cursor: pointer;\n    border: none;\n    background: none;\n    font-family: inherit;\n    &:disabled {\n      cursor: default;\n    }\n  }\n\n  textarea {\n    padding: 1rem;\n    width: 100%;\n    height: 100%;\n    border-radius: 6px;\n    border: 1px solid #ccc;\n    resize: none;\n    white-space: normal;\n    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);\n  }\n\n  &::-webkit-scrollbar {\n    width: 0.5rem;\n    background-color: transparent;\n  }\n  &::-webkit-scrollbar-track {\n    background-color: transparent;\n  }\n  &::-webkit-scrollbar-thumb {\n    background-color: #ccc;\n  }\n\n  .sr-only {\n    position: absolute;\n    width: 1px;\n    height: 1px;\n    padding: 0;\n    margin: -1px;\n    overflow: hidden;\n    clip: rect(0, 0, 0, 0);\n    white-space: nowrap;\n    border: 0;\n  }\n"])));
+exports["default"] = GLOBAL_STYLE;
+var templateObject_1;
