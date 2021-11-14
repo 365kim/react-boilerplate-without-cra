@@ -20,7 +20,7 @@
 - Basics
   - [x] Button
   - [x] Input
-  - [ ] Icon
+  - [x] Icon
   - [ ] CallOut
   - [ ] Checkbox
   - [ ] Heading
