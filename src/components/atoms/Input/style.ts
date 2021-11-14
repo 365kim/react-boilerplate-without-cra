@@ -17,7 +17,6 @@ export const container = css`
   margin: 4px 0;
   padding: 0 12px;
 
-  font-size: 14px;
   font-weight: 500;
   border-radius: 8px;
   background-color: rgba(0, 0, 0, 0.02);

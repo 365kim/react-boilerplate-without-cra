@@ -5,11 +5,14 @@ export const GLOBAL_STYLE = css`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
     letter-spacing: -0.03rem;
     outline-color: #000;
     font-family: -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', Pretendard, Roboto, 'Noto Sans KR',
       'Segoe UI', 'Malgun Gothic', sans-serif;
+    font-size: 14px;
   }
+
   html,
   body {
     height: 100%;
@@ -18,9 +21,7 @@ export const GLOBAL_STYLE = css`
   main {
     height: 100%;
   }
-  #root {
-    height: 100%;
-  }
+
   a {
     color: inherit;
     text-decoration: none;
@@ -35,9 +36,11 @@ export const GLOBAL_STYLE = css`
       color: inherit;
     }
   }
+
   h2 {
-    padding: 1.75rem 0 1.25rem;
-    font-size: 1.2rem;
+    padding: 20px 0;
+
+    font-size: 18px;
     font-weight: 600;
     line-height: 1.1rem;
     text-align: center;
@@ -60,14 +63,15 @@ export const GLOBAL_STYLE = css`
   }
 
   textarea {
-    padding: 1rem;
     width: 100%;
     height: 100%;
+    padding: 16px;
+
     border-radius: 6px;
     border: 1px solid #ccc;
-    resize: none;
     white-space: normal;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    resize: none;
   }
 
   &::-webkit-scrollbar {
