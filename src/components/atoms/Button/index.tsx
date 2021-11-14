@@ -17,7 +17,7 @@ export const Button = ({
   disabled = false,
   shine = false,
   ...rest
-}: Props): JSX.Element => {
+}: Props) => {
   return (
     <button
       css={[

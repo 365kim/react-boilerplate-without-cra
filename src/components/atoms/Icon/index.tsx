@@ -17,7 +17,7 @@ export const Icon = ({
   hasHoverColor = false,
   hasActiveColor = false,
   ...rest
-}: Props): JSX.Element => {
+}: Props) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

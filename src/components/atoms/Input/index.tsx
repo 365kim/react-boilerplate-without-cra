@@ -1,4 +1,4 @@
-import { useRef, useState, InputHTMLAttributes, PropsWithChildren, ReactNode, ChangeEvent, SVGAttributes } from 'react';
+import { useRef, useState, InputHTMLAttributes, ChangeEvent, SVGAttributes } from 'react';
 
 import * as css from './style';
 import { getID } from 'utils';
@@ -24,7 +24,7 @@ export const Input = ({
   isError,
   defaultValue = '',
   ...rest
-}: PropsWithChildren<Props>): JSX.Element => {
+}: Props) => {
   const [value, setValue] = useState(defaultValue);
   const hasValue = value.length > 0;
   const id = useRef(getID());

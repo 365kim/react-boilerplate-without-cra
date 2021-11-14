@@ -2,7 +2,7 @@ import { lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Link, Route, Routes } from 'react-router-dom';
 
 import { HomePage } from 'pages';
-import { Button, Icon, Input } from 'components';
+import { Button, FlexBox, Icon, Input } from 'components';
 import { ArrowLeftSimple, ArrowUp, Check } from 'icons';
 
 const AboutPage = lazy(() => import(/* webpackChunkName: "AboutPage" */ './pages/AboutPage'));
@@ -11,7 +11,7 @@ const App = (): JSX.Element => {
   return (
     <Router>
       <Suspense fallback={''}>
-        <div>
+        <FlexBox dir="row-reverse" gap="20px">
           <Button color="gradient" shape="pill" shine>
             <Link to="">Pill</Link>
           </Button>
@@ -27,7 +27,7 @@ const App = (): JSX.Element => {
           <Icon icon={Check}></Icon>
           <Icon icon={ArrowUp} color="secondary"></Icon>
           <Icon icon={ArrowLeftSimple} color="primary"></Icon>
-        </div>
+        </FlexBox>
 
         <Routes>
           <Route path={'/'} element={<HomePage />} />
