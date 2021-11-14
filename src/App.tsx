@@ -11,7 +11,7 @@ const App = (): JSX.Element => {
   return (
     <Router>
       <Suspense fallback={''}>
-        <FlexBox dir="row-reverse" gap="20px">
+        <FlexBox dir="row-reverse" gap="20px" mt="100px">
           <Button color="gradient" shape="pill" shine>
             <Link to="">Pill</Link>
           </Button>
