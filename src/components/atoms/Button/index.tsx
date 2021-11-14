@@ -10,7 +10,7 @@ interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
   readonly shine?: boolean;
 }
 
-const Button = ({
+export const Button = ({
   color = 'primary',
   size = 'md',
   shape = 'default',
@@ -32,5 +32,3 @@ const Button = ({
     ></button>
   );
 };
-
-export default Button;

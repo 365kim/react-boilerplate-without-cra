@@ -2,7 +2,7 @@ import ReactDOM from 'react-dom';
 import { Global } from '@emotion/react';
 
 import App from './App';
-import { GLOBAL_STYLE } from './styledSystem';
+import { GLOBAL_STYLE } from 'styles';
 
 ReactDOM.render(
   <>

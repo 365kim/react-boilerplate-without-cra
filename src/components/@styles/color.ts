@@ -1,12 +1,8 @@
-const COLOR = {
-  GRADIENT:
-    'linear-gradient(50deg, rgb(39, 178, 231) 0%, rgb(47, 224, 148) 100%)',
-  GRADIENT_REVERSE:
-    'linear-gradient(50deg, rgb(47, 224, 148) 0%, rgb(39 178 231) 100%)',
-  GRADIENT_LIGHT:
-    'linear-gradient(50deg, rgb(67, 200, 255) 0%, rgb(48, 254, 150) 100%)',
-  GRADIENT_DARK:
-    'linear-gradient(50deg, rgb(39, 134, 195) 0%, rgb(43, 189, 126) 100%)',
+export const COLOR = {
+  GRADIENT: 'linear-gradient(50deg, rgb(39, 178, 231) 0%, rgb(47, 224, 148) 100%)',
+  GRADIENT_REVERSE: 'linear-gradient(50deg, rgb(47, 224, 148) 0%, rgb(39 178 231) 100%)',
+  GRADIENT_LIGHT: 'linear-gradient(50deg, rgb(67, 200, 255) 0%, rgb(48, 254, 150) 100%)',
+  GRADIENT_DARK: 'linear-gradient(50deg, rgb(39, 134, 195) 0%, rgb(43, 189, 126) 100%)',
   ON_GRADIENT: 'rgb(255, 255, 255)',
 
   PRIMARY: 'rgb(47, 224, 148)',
@@ -35,5 +31,3 @@ const COLOR = {
   BORDER: 'rgb(221, 221, 221)',
   BORDER_DARK: 'rgb(153, 153, 153)',
 };
-
-export default COLOR;

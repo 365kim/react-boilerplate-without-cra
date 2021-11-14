@@ -1,6 +1,6 @@
 import { css } from '@emotion/react';
 
-import COLOR from '@styles/color';
+import { COLOR } from 'styles';
 
 export const common = css`
   position: relative;

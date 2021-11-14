@@ -1,6 +1,6 @@
 import { css } from '@emotion/react';
 
-import COLOR from '../../@styles/color';
+import { COLOR } from 'styles';
 
 const INPUT_HEIGHT = '50px';
 const LABEL_HEIGHT = '17px';

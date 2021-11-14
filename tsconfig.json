@@ -30,18 +30,16 @@
     "moduleResolution": "node" /* Specify how TypeScript looks up a file from a given module specifier. */,
     "paths": {
       "pages": ["./src/pages"],
-      "styled-system": ["./src/styledSystem"],
-      "atoms": ["./src/styledSystem/atoms"],
-      "atoms/*": ["./src/styledSystem/atoms/*"],
-      "molecules": ["./src/styledSystem/molecules"],
-      "molecules/*": ["./src/styledSystem/molecules/*"],
-      "templates": ["./src/styledSystem/templates"],
-      "templates/*": ["./src/styledSystem/templates/*"],
-      "@styles/*": ["./src/styledSystem/@styles/*"],
-      "utils/*": ["./src/utils/*"],
-      "hooks/*": ["./src/hooks/*"],
-      "constants/*": ["./src/constants/*"],
-      "assets/*": ["./src/assets/*"]
+      "components": ["./src/components"],
+      "atoms": ["./src/components/atoms"],
+      "icons": ["./src/components/atoms/Icon/paths"],
+      "molecules": ["./src/components/molecules"],
+      "templates": ["./src/components/templates"],
+      "styles": ["./src/components/@styles"],
+      "utils": ["./src/utils"],
+      "hooks": ["./src/hooks"],
+      "constants": ["./src/constants"],
+      "assets": ["./src/assets"]
     } /* Specify a set of entries that re-map imports to additional lookup locations. */,
     // "rootDir": "./",                                  /* Specify the root folder within your source files. */
     // "baseUrl": "./",                                  /* Specify the base directory to resolve non-relative module names. */

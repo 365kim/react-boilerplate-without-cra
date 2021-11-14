@@ -1,15 +1,14 @@
 import { css } from '@emotion/react';
 
-const GLOBAL_STYLE = css`
+export const GLOBAL_STYLE = css`
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     letter-spacing: -0.03rem;
     outline-color: #000;
-    font-family: -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo',
-      Pretendard, Roboto, 'Noto Sans KR', 'Segoe UI', 'Malgun Gothic',
-      sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', Pretendard, Roboto, 'Noto Sans KR',
+      'Segoe UI', 'Malgun Gothic', sans-serif;
   }
   html,
   body {
@@ -94,5 +93,3 @@ const GLOBAL_STYLE = css`
     border: 0;
   }
 `;
-
-export default GLOBAL_STYLE;

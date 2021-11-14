@@ -1,9 +1,9 @@
-import { useRef, useState, InputHTMLAttributes, PropsWithChildren, ReactNode, ChangeEvent } from 'react';
-import { getID } from '../../../utils/generatorOfID';
+import { useRef, useState, InputHTMLAttributes, PropsWithChildren, ReactNode, ChangeEvent, SVGAttributes } from 'react';
 
 import * as css from './style';
+import { getID } from 'utils';
 
-type Icon = ReactNode;
+type Icon = SVGAttributes<SVGSVGElement>;
 
 interface Props extends InputHTMLAttributes<HTMLInputElement> {
   readonly label?: string;
@@ -15,7 +15,7 @@ interface Props extends InputHTMLAttributes<HTMLInputElement> {
   readonly defaultValue?: string;
 }
 
-const Input = ({
+export const Input = ({
   label,
   leftIcon,
   rightIcon,
@@ -47,5 +47,3 @@ const Input = ({
     </div>
   );
 };
-
-export default Input;
