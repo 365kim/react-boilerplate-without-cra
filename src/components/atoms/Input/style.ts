@@ -3,7 +3,7 @@ import { css } from '@emotion/react';
 import { COLOR } from 'styles';
 
 const INPUT_HEIGHT = '50px';
-const LABEL_HEIGHT = '17px';
+const LABEL_HEIGHT = '20px';
 
 export const shrinkLabel = css`
   transform: translateY(-50%) scale(0.7);

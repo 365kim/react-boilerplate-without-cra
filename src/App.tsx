@@ -11,7 +11,7 @@ const App = (): JSX.Element => {
   return (
     <Router>
       <Suspense fallback={''}>
-        <FlexBox dir="row-reverse" gap="20px" mt="100px">
+        <FlexBox dir="row" gap="20px" mt="150px">
           <Button color="gradient" shape="pill" shine>
             <Link to="">Pill</Link>
           </Button>
@@ -21,9 +21,13 @@ const App = (): JSX.Element => {
           <Button color="secondary" shape="square">
             <Link to="about">Square</Link>
           </Button>
+        </FlexBox>
+        <FlexBox dir="row" gap="20px" mt="50px">
           <Input label="이름" />
           <Input label="문제없서연" isSuccess />
           <Input label="에러났서연" isError />
+        </FlexBox>
+        <FlexBox dir="row" gap="20px" mt="50px">
           <Icon icon={Check}></Icon>
           <Icon icon={ArrowUp} color="secondary"></Icon>
           <Icon icon={ArrowLeftSimple} color="primary"></Icon>

@@ -30,7 +30,7 @@ export const FlexBox = ({
   justify = 'center',
   align = 'center',
   width = '100%',
-  height = '200px',
+  height = 'fit-content',
   m = 0,
   mr = 0,
   ml = 0,
@@ -53,7 +53,6 @@ export const FlexBox = ({
         flex-wrap: ${wrap};
         align-items: ${align};
         justify-content: ${justify};
-        gap: ${gap};
         width: ${width};
         height: ${height};
         margin: ${m};
@@ -66,6 +65,10 @@ export const FlexBox = ({
         padding-left: ${pl};
         padding-top: ${pt};
         padding-bottom: ${pb};
+
+        & > * + * {
+          margin-left: ${gap};
+        }
       `}
       {...rest}
     >
