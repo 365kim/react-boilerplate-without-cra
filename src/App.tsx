@@ -2,7 +2,7 @@ import { lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Link, Route, Routes } from 'react-router-dom';
 
 import { HomePage } from 'pages';
-import { Button, Input } from 'styled-system';
+import { Button, Icon, Input } from 'styled-system';
 
 const AboutPage = lazy(() => import(/* webpackChunkName: "AboutPage" */ './pages/AboutPage'));
 
@@ -23,6 +23,9 @@ const App = (): JSX.Element => {
           <Input label="이름" />
           <Input label="문제없서연" isSuccess />
           <Input label="에러났서연" isError />
+          <Icon type="check"></Icon>
+          <Icon type="arrowUp" color="secondary"></Icon>
+          <Icon type="arrowLeftSimple" color="primary"></Icon>
         </div>
 
         <Routes>

@@ -1,8 +1,8 @@
 import { css } from '@emotion/react';
 
-import COLOR from '../../@styles/color';
+import COLOR from '@styles/color';
 
-export const button = css`
+export const common = css`
   position: relative;
   margin: 4px 0;
   box-shadow: rgb(0 0 0 / 14%) 1px 4px 4px, rgb(0 0 0 / 12%) 1px 1px 8px;

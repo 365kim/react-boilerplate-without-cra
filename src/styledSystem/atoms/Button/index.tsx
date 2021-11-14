@@ -21,7 +21,7 @@ const Button = ({
   return (
     <button
       css={[
-        css.button,
+        css.common,
         css.color[color],
         css.size[size],
         css.shape[shape],

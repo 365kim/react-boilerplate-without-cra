@@ -17,6 +17,7 @@ const getConfig = ({ isDev, isAnalyzeMode }) => ({
       atoms: path.resolve(__dirname, 'src/styledSystem/atoms/'),
       molecules: path.resolve(__dirname, 'src/styledSystem/molecules/'),
       templates: path.resolve(__dirname, 'src/styledSystem/templates/'),
+      '@styles': path.resolve(__dirname, 'src/styledSystem/@styles/'),
       utils: path.resolve(__dirname, 'src/utils/'),
       hooks: path.resolve(__dirname, 'src/hooks/'),
       constants: path.resolve(__dirname, 'src/constants/'),

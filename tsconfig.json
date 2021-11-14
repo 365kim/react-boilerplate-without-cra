@@ -37,6 +37,7 @@
       "molecules/*": ["./src/styledSystem/molecules/*"],
       "templates": ["./src/styledSystem/templates"],
       "templates/*": ["./src/styledSystem/templates/*"],
+      "@styles/*": ["./src/styledSystem/@styles/*"],
       "utils/*": ["./src/utils/*"],
       "hooks/*": ["./src/hooks/*"],
       "constants/*": ["./src/constants/*"],
