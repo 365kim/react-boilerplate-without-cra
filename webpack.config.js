@@ -39,15 +39,15 @@ const getConfig = ({ isDev, isAnalyzeMode }) => ({
   module: {
     rules: [
       {
-        test: /\.(ts|tsx)$/,
-        use: {
-          loader: 'ts-loader',
-          options: {
-            configFile: path.resolve(__dirname, 'tsconfig.json'),
-            transpileOnly: true,
-          },
+        test: /\.(png|jpe?g|gif|webp)$/i,
+        type: 'asset/resource',
+        generator: {
+          filename: 'images/[name][ext]',
         },
-        exclude: /node_modules/,
+      },
+      {
+        test: /\.svg$/i,
+        type: 'asset/inline',
       },
       {
         test: /\.(js|jsx)$/,
@@ -58,15 +58,15 @@ const getConfig = ({ isDev, isAnalyzeMode }) => ({
         },
       },
       {
-        test: /\.(png|jpe?g|gif|webp)$/i,
-        type: 'asset/resource',
-        generator: {
-          filename: 'images/[name][ext]',
+        test: /\.(ts|tsx)$/,
+        use: {
+          loader: 'ts-loader',
+          options: {
+            configFile: path.resolve(__dirname, 'tsconfig.json'),
+            transpileOnly: true,
+          },
         },
-      },
-      {
-        test: /\.svg$/i,
-        type: 'asset/inline',
+        exclude: /node_modules/,
       },
     ],
   },
