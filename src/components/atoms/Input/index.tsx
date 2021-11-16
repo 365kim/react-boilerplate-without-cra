@@ -6,13 +6,13 @@ import { getID } from 'utils';
 type Icon = SVGAttributes<SVGSVGElement>;
 
 interface Props extends InputHTMLAttributes<HTMLInputElement> {
-  readonly label?: string;
-  readonly leftIcon?: Icon;
-  readonly rightIcon?: Icon;
-  readonly clearable?: boolean;
-  readonly isSuccess?: boolean;
-  readonly isError?: boolean;
-  readonly defaultValue?: string;
+  label?: string;
+  leftIcon?: Icon;
+  rightIcon?: Icon;
+  clearable?: boolean;
+  isSuccess?: boolean;
+  isError?: boolean;
+  defaultValue?: string;
 }
 
 export const Input = ({

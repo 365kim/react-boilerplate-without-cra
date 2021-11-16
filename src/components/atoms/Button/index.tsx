@@ -3,19 +3,19 @@ import { ButtonHTMLAttributes } from 'react';
 import * as css from './style';
 
 interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
-  readonly color?: 'primary' | 'primaryOutline' | 'secondary' | 'secondaryOutline' | 'gradient';
-  readonly size?: 'xs' | 'sm' | 'md' | 'lg';
-  readonly shape?: 'default' | 'square' | 'pill' | 'circle';
-  readonly disabled?: boolean;
-  readonly shine?: boolean;
+  color?: 'primary' | 'primaryOutline' | 'secondary' | 'secondaryOutline' | 'gradient';
+  size?: 'xs' | 'sm' | 'md' | 'lg';
+  shape?: 'default' | 'square' | 'pill' | 'circle';
+  shine?: boolean;
 }
 
-export const Button = ({
+const Button = ({
   color = 'primary',
   size = 'md',
   shape = 'default',
   disabled = false,
   shine = false,
+  children,
   ...rest
 }: Props) => {
   return (
@@ -29,6 +29,10 @@ export const Button = ({
         shine && css.effect.shine,
       ]}
       {...rest}
-    ></button>
+    >
+      {children}
+    </button>
   );
 };
+
+export { Button };

@@ -3,11 +3,11 @@ import { SVGAttributes } from 'react';
 import * as css from './style';
 
 interface Props extends SVGAttributes<SVGSVGElement> {
-  readonly icon: JSX.Element;
-  readonly size?: number;
-  readonly color?: 'default' | 'primary' | 'secondary' | 'white';
-  readonly hasHoverColor?: boolean;
-  readonly hasActiveColor?: boolean;
+  icon: JSX.Element;
+  size?: number;
+  color?: 'default' | 'primary' | 'secondary' | 'white';
+  hasHoverColor?: boolean;
+  hasActiveColor?: boolean;
 }
 
 export const Icon = ({
