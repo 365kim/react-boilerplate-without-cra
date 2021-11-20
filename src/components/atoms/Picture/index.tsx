@@ -32,18 +32,16 @@ export const Source = ({ format, set, maxWidth, ...rest }: SourceProp) => {
   );
 };
 
-const convertPathToMinFormat = (set: ImageSet, format: ImageFormat, minType: ImageFormat): ImageSet => {
-  const setClone = JSON.parse(JSON.stringify(set));
-
+const convertImageFormat = (set: ImageSet, before: ImageFormat, after: ImageFormat): ImageSet => {
   return Object.keys(set).reduce((acc, key) => {
-    acc[key] = convertExtensionInPath(set[key as keyof ImageSet], format, minType);
+    acc[key as keyof ImageSet] = convertExtensionInPath(set[key as keyof ImageSet], before, after);
     return acc;
-  }, setClone);
+  }, {} as ImageSet);
 };
 
 export const Picture = ({ format = 'png', minFormat, set, setTablet, alt }: PictureProp) => {
-  const minSrc = minFormat && convertPathToMinFormat(set, format, minFormat);
-  const minSrcTablet = minFormat && setTablet && convertPathToMinFormat(setTablet, format, minFormat);
+  const minSrc = minFormat && convertImageFormat(set, format, minFormat);
+  const minSrcTablet = minFormat && setTablet && convertImageFormat(setTablet, format, minFormat);
 
   /* Source 순서 임의변경 금지 */
   return (
