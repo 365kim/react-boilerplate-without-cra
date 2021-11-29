@@ -1,6 +1,7 @@
 import { ButtonHTMLAttributes } from 'react';
 
 import * as css from './style';
+import { MOTION } from 'styles';
 
 interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
   color?: 'primary' | 'primaryOutline' | 'secondary' | 'secondaryOutline' | 'gradient';
@@ -26,7 +27,7 @@ const Button = ({
         css.size[size],
         css.shape[shape],
         disabled && css.state.disabled,
-        shine && css.effect.shine,
+        shine && MOTION.SHINE,
       ]}
       {...rest}
     >
