@@ -21,7 +21,7 @@ interface Props {
   pl?: LengthUnit;
   pt?: LengthUnit;
   pb?: LengthUnit;
-  children: JSX.Element[];
+  children: JSX.Element[] | JSX.Element;
 }
 
 export const FlexBox = ({
