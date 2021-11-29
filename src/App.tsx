@@ -2,12 +2,14 @@ import { lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Link, Route, Routes } from 'react-router-dom';
 
 import { HomePage } from 'pages';
-import { Button, FlexBox, Icon, Input } from 'components';
+import { Button, FlexBox, Icon, Input, useModal } from 'components';
 import { ArrowLeftSimple, ArrowUp, Check } from 'icons';
 
 const AboutPage = lazy(() => import(/* webpackChunkName: "AboutPage" */ './pages/AboutPage'));
 
 const App = (): JSX.Element => {
+  const { Modal: TestModal, open } = useModal({ id: 'test-modal' });
+
   return (
     <Router>
       <Suspense fallback={''}>
@@ -28,10 +30,22 @@ const App = (): JSX.Element => {
           <Input label="에러났서연" isError />
         </FlexBox>
         <FlexBox dir="row" gap="20px" mt="50px">
-          <Icon icon={Check}></Icon>
-          <Icon icon={ArrowUp} color="secondary"></Icon>
-          <Icon icon={ArrowLeftSimple} color="primary"></Icon>
+          <Icon icon={Check} />
+          <Icon icon={ArrowUp} color="secondary" />
+          <Icon icon={ArrowLeftSimple} color="primary" />
         </FlexBox>
+        <FlexBox>
+          <Button size="lg" onClick={open}>
+            모달을 만들었어요
+          </Button>
+        </FlexBox>
+
+        <TestModal slideDirection="center" hasCloseButton>
+          <>
+            <h2>제목을 써요</h2>
+            <p>모달 내용을 써요.</p>
+          </>
+        </TestModal>
 
         <Routes>
           <Route path={'/'} element={<HomePage />} />
