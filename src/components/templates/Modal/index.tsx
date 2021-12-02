@@ -56,8 +56,6 @@ export const useModal = ({ id = 'modal', isOpenInitially = false }: InitialState
       closeSideEffect();
     };
 
-    console.log({ slideDirection });
-
     const handleKeyDownEsc = (e: KeyboardEvent) => {
       if (e.key !== 'Escape') return;
       e.stopPropagation();
