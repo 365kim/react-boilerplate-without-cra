@@ -2,7 +2,7 @@ import { lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Link, Route, Routes } from 'react-router-dom';
 
 import { HomePage } from 'pages';
-import { Button, Checkbox, FlexBox, Icon, Input, useModal } from 'components';
+import { Button, Checkbox, FlexBox, Icon, Input, ToggleButton, useModal } from 'components';
 import { ArrowLeftSimple, ArrowUp, Check } from 'icons';
 
 const AboutPage = lazy(() => import(/* webpackChunkName: "AboutPage" */ './pages/AboutPage'));
@@ -42,6 +42,11 @@ const App = (): JSX.Element => {
           <Checkbox id="test-checkbox2">
             <a href="#">약관</a>을 읽고 선택해 주세요.
           </Checkbox>
+        </FlexBox>
+
+        <FlexBox>
+          <ToggleButton on="ON" off="OFF" />
+          <ToggleButton on="알림 받기" off="알림 받지않기" size="md" />
         </FlexBox>
 
         <FlexBox>

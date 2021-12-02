@@ -12,8 +12,8 @@ export const input = css`
   position: absolute;
   top: -9999px;
   left: -9999px;
-  height: 0;
   width: 0;
+  height: 0;
   cursor: inherit;
 `;
 
