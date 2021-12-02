@@ -1,6 +1,6 @@
 import { ButtonHTMLAttributes } from 'react';
 
-import * as css from './style';
+import * as css from './css';
 import { MOTION } from 'styles';
 
 interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {

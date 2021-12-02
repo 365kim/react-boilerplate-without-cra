@@ -1,6 +1,6 @@
 import { css } from '@emotion/react';
 import { COLOR } from 'styles';
-import { checkMotion, shrinkBounceMotion } from './motion';
+import { checkMotion } from './motion';
 
 export const container = css`
   width: fit-content;
