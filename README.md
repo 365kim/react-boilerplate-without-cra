@@ -22,13 +22,13 @@
   - [x] Input
   - [x] Icon
   - [ ] CallOut
-  - [ ] Checkbox
+  - [x] Checkbox
   - [ ] Heading
   - [ ] Label
   - [ ] Link
   - [ ] Pagination
   - [ ] Paragraph
-  - [ ] Picture
+  - [x] Picture
   - [ ] Progressbar
   - [ ] RadioButton
   - [ ] Select
