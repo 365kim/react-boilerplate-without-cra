@@ -26,6 +26,7 @@ export const COLOR = {
   ON_ERROR: 'rgb(0, 0, 0)',
 
   PARAGRAPH: 'rgb(17, 17, 17)',
+  PARAGRAPH_LIGHT: 'rgb(51, 51, 51)',
   INPUT_TEXT: 'rgb(51, 51, 51)',
   PLACEHOLDER: 'rgb(136, 136, 136)',
   BORDER: 'rgb(221, 221, 221)',

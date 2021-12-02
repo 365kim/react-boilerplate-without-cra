@@ -2,7 +2,7 @@ import { lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Link, Route, Routes } from 'react-router-dom';
 
 import { HomePage } from 'pages';
-import { Button, FlexBox, Icon, Input, useModal } from 'components';
+import { Button, Checkbox, FlexBox, Icon, Input, useModal } from 'components';
 import { ArrowLeftSimple, ArrowUp, Check } from 'icons';
 
 const AboutPage = lazy(() => import(/* webpackChunkName: "AboutPage" */ './pages/AboutPage'));
@@ -24,16 +24,26 @@ const App = (): JSX.Element => {
             <Link to="about">Square</Link>
           </Button>
         </FlexBox>
+
         <FlexBox dir="row" gap="20px" mt="50px">
           <Input label="이름" />
           <Input label="문제없서연" isSuccess />
           <Input label="에러났서연" isError />
         </FlexBox>
+
         <FlexBox dir="row" gap="20px" mt="50px">
           <Icon icon={Check} />
           <Icon icon={ArrowUp} color="secondary" />
           <Icon icon={ArrowLeftSimple} color="primary" />
         </FlexBox>
+
+        <FlexBox>
+          <Checkbox id="test-checkbox1">선택해 주세요.</Checkbox>
+          <Checkbox id="test-checkbox2">
+            <a href="#">약관</a>을 읽고 선택해 주세요.
+          </Checkbox>
+        </FlexBox>
+
         <FlexBox>
           <Button size="lg" onClick={open}>
             모달을 만들었어요
